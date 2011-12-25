@@ -1,0 +1,7 @@
+propel:
+  weather:
+    city: varchar(80)
+    temp_lo: integer
+    temp_hi: integer
+    prcp: real
+    date: date
