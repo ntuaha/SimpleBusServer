@@ -1,1 +1,9 @@
-data/
+log/
+cache/
+external-data/
+.buildpath
+.gitignore.swp
+.gitignore~
+.metadata/
+.project
+.settings/
