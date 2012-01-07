@@ -1,0 +1,30 @@
+1.
+wush: 算出公車到站時間
+
+1. 定義到站
+2. 找出到站時間  
+3. 預測
+x3.1. 分類
+x3.2. Tag 到站時間 (列出天的特性  時間  )
+4. 寫入表格
+
+output
+busid
+routeid
+stopid
+time
+estimationtime
+
+
+input
+stopid     => stopid_A stopid_B
+routeid        
+time
+goBack
+
+
+
+
+aha: 視覺化
+     修改手機端增加 stopid routed time goGack
+     新增  current_bus table
