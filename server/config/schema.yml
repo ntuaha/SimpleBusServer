@@ -1,0 +1,102 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  PresidentialElection2004:
+    _attributes: { phpName: Presidentialelection2004, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    county: { phpName: County, type: VARCHAR, required: false }
+    city: { phpName: City, type: VARCHAR, required: false }
+    village: { phpName: Village, type: VARCHAR, required: false }
+    VoteNo: { phpName: Voteno, type: INTEGER, required: false }
+    DPPNum: { phpName: Dppnum, type: INTEGER, required: false }
+    DPPRatio: { phpName: Dppratio, type: FLOAT, required: false }
+    KMTNum: { phpName: Kmtnum, type: INTEGER, required: false }
+    KMTRatio: { phpName: Kmtratio, type: FLOAT, required: false }
+    vaildVotes: { phpName: Vaildvotes, type: INTEGER, required: false }
+    invaildVotes: { phpName: Invaildvotes, type: INTEGER, required: false }
+    totalVotes: { phpName: Totalvotes, type: INTEGER, required: false }
+    otherVotes: { phpName: Othervotes, type: INTEGER, required: false }
+    VotersNum: { phpName: Votersnum, type: INTEGER, required: false }
+    VotersRatio: { phpName: Votersratio, type: FLOAT, required: false }
+  buses_2011_01:
+    _attributes: { phpName: Buses201101, idMethod: native }
+    id: { phpName: Id, type: BIGINT, primaryKey: true, autoIncrement: true, required: true }
+    stationid: { phpName: Stationid, type: INTEGER, required: false }
+    cartype: { phpName: Cartype, type: INTEGER, required: false }
+    busid: { phpName: Busid, type: VARCHAR, required: false }
+    providerid: { phpName: Providerid, type: INTEGER, required: false }
+    carid: { phpName: Carid, type: INTEGER, required: false }
+    dutystatus: { phpName: Dutystatus, type: INTEGER, required: false }
+    busstatus: { phpName: Busstatus, type: INTEGER, required: false }
+    routeid: { phpName: Routeid, type: INTEGER, required: false }
+    goback: { phpName: Goback, type: INTEGER, required: false }
+    longitude: { phpName: Longitude, type: DOUBLE, required: false }
+    latitude: { phpName: Latitude, type: DOUBLE, required: false }
+    speed: { phpName: Speed, type: DOUBLE, required: false }
+    azimuth: { phpName: Azimuth, type: DOUBLE, required: false }
+    datatime: { phpName: Datatime, type: TIMESTAMP, required: false }
+    _indexes: { busdata_2011_01_idx: [busid, datatime] }
+  providers_2011:
+    _attributes: { phpName: Providers2011, idMethod: native }
+    id: { phpName: Id, type: BIGINT, primaryKey: true, autoIncrement: true, required: true }
+    providerid: { phpName: Providerid, type: INTEGER, required: false }
+    namezn: { phpName: Namezn, type: VARCHAR, required: false }
+    nameen: { phpName: Nameen, type: VARCHAR, required: false }
+    email: { phpName: Email, type: VARCHAR, required: false }
+    phoneinfo: { phpName: Phoneinfo, type: VARCHAR, required: false }
+    stationid: { phpName: Stationid, type: INTEGER, required: false }
+    stationnamezn: { phpName: Stationnamezn, type: VARCHAR, required: false }
+    stationnameen: { phpName: Stationnameen, type: VARCHAR, required: false }
+    type: { phpName: Type, type: INTEGER, required: false }
+    _indexes: { provider_2011_idx: [providerid] }
+  routes_2011:
+    _attributes: { phpName: Routes2011, idMethod: native }
+    id: { phpName: Id, type: BIGINT, primaryKey: true, autoIncrement: true, required: true }
+    routeid: { phpName: Routeid, type: INTEGER, required: false }
+    providerid: { phpName: Providerid, type: INTEGER, required: false }
+    providername: { phpName: Providername, type: VARCHAR, required: false }
+    namezh: { phpName: Namezh, type: VARCHAR, required: false }
+    nameen: { phpName: Nameen, type: VARCHAR, required: false }
+    pathattributeid: { phpName: Pathattributeid, type: INTEGER, required: false }
+    pathattributename: { phpName: Pathattributename, type: VARCHAR, required: false }
+    pathattributeename: { phpName: Pathattributeename, type: VARCHAR, required: false }
+    buildperiod: { phpName: Buildperiod, type: INTEGER, required: false }
+    departurezh: { phpName: Departurezh, type: VARCHAR, required: false }
+    departureen: { phpName: Departureen, type: VARCHAR, required: false }
+    destinationzh: { phpName: Destinationzh, type: VARCHAR, required: false }
+    destinationen: { phpName: Destinationen, type: VARCHAR, required: false }
+    realsequence: { phpName: Realsequence, type: INTEGER, required: false }
+    distance: { phpName: Distance, type: INTEGER, required: false }
+    gofirstbustime: { phpName: Gofirstbustime, type: VARCHAR, required: false }
+    backfirstbustime: { phpName: Backfirstbustime, type: VARCHAR, required: false }
+    golastbustime: { phpName: Golastbustime, type: VARCHAR, required: false }
+    backlastbustime: { phpName: Backlastbustime, type: VARCHAR, required: false }
+    offpeakheadway: { phpName: Offpeakheadway, type: VARCHAR, required: false }
+    _indexes: { route_2011_idx: [routeid] }
+  stops_2011:
+    _attributes: { phpName: Stops2011, idMethod: native }
+    id: { phpName: Id, type: BIGINT, primaryKey: true, autoIncrement: true, required: true }
+    stopid: { phpName: Stopid, type: INTEGER, required: false }
+    routeid: { phpName: Routeid, type: INTEGER, required: false }
+    namezh: { phpName: Namezh, type: VARCHAR, required: false }
+    nameen: { phpName: Nameen, type: VARCHAR, required: false }
+    seqno: { phpName: Seqno, type: INTEGER, required: false }
+    pgp: { phpName: Pgp, type: INTEGER, required: false }
+    goback: { phpName: Goback, type: INTEGER, required: false }
+    longitude: { phpName: Longitude, type: DOUBLE, required: false }
+    latitude: { phpName: Latitude, type: DOUBLE, required: false }
+    address: { phpName: Address, type: VARCHAR, required: false }
+    stoplocationid: { phpName: Stoplocationid, type: INTEGER, required: false }
+    showlon: { phpName: Showlon, type: DOUBLE, required: false }
+    showlat: { phpName: Showlat, type: DOUBLE, required: false }
+    vector: { phpName: Vector, type: INTEGER, required: false }
+    _indexes: { stops_2011_idx: [stopid] }
+  time_estimations_2011:
+    _attributes: { phpName: TimeEstimations2011, idMethod: native }
+    id: { phpName: Id, type: BIGINT, primaryKey: true, autoIncrement: true, required: true }
+    stopid: { phpName: Stopid, type: INTEGER, required: false }
+    routeid: { phpName: Routeid, type: INTEGER, required: false }
+    estimatetime: { phpName: Estimatetime, type: INTEGER, required: false }
+    goback: { phpName: Goback, type: INTEGER, required: false }
+    time: { phpName: Time, type: TIMESTAMP, required: false }
