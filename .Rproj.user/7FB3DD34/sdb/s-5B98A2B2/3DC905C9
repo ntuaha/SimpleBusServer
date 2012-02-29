@@ -1,0 +1,15 @@
+{
+    "contents" : "load(paste(\"data/carid_\", car_id, \".Rdata\", sep=\"\"))\ncar <- car_976\nrm(car_976)\ngc()\n",
+    "created" : 1330400006568.000,
+    "dirty" : false,
+    "encoding" : "BIG5",
+    "hash" : "1113680202",
+    "id" : "3DC905C9",
+    "lastKnownWriteTime" : 1330520789,
+    "path" : "~/car_data/loadData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

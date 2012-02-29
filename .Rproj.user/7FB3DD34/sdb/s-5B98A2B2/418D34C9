@@ -1,0 +1,15 @@
+{
+    "contents" : "{ # loading libraries\n  library(Rinclude)\n}\n\n{ # parameter setting\n  car_id <- 976\n}\n\n{ # loading data\n  include(\"loadData.R\", local=.GlobalEnv)\n}\n\n",
+    "created" : 1330399890991.000,
+    "dirty" : true,
+    "encoding" : "BIG5",
+    "hash" : "828936601",
+    "id" : "418D34C9",
+    "lastKnownWriteTime" : 1330520741,
+    "path" : "~/car_data/exec.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

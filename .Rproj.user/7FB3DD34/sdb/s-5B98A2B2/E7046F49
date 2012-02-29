@@ -1,0 +1,15 @@
+{
+    "contents" : "names(car)\ny <- car[,c(\"longitude\", \"latitude\")]\ny.time <- car[,\"datatime\"]\n",
+    "created" : 1330520815689.000,
+    "dirty" : false,
+    "encoding" : "BIG5",
+    "hash" : "731137932",
+    "id" : "E7046F49",
+    "lastKnownWriteTime" : 1330520921,
+    "path" : "~/car_data/src/getSequence.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
