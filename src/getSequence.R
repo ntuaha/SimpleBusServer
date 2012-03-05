@@ -1,3 +1,4 @@
+info(logger, 'getSequence.R entered')
 # names(car)
 car[,"date"] <- as.integer(format(car[,"datatime"], "%d"))
 car[,"hour"] <- as.integer(format(car[,"datatime"], "%H"))
@@ -13,10 +14,17 @@ car_line <- Lines(car_line, ID="car_id")
 car_line <- SpatialLines(list(car_line))
 car_diff_dist <- rep(as.numeric(0), nrow(car) - 1)
 n <- nrow(car) - 1
-system.time(sapply(1:n, function(i) car_diff_dist[i] <<- spDists(car[i,], car[i+1,])[1]))
+info(logger, paste('start to evaluating car_diff_dist with n:', n))
+system.time(sapply(1:n, function(i) {
+	if (i %% 100 == 0) 
+		show(i)
+	car_diff_dist[i] <<- spDists(car[i,], car[i+1,])[1]
+}))
 #load("temp.Rdata");car_diff_dist <- car_diff
 car_diff_time <- rep(NA, nrow(car) - 1)
-system.time(sapply(1:n, function(i) car_diff_time[i] <<- car$datatime[i+1] - car$datatime[i]))
+system.time(sapply(1:n, function(i) {
+	car_diff_time[i] <<- car$datatime[i+1] - car$datatime[i]
+}))
 
 #sm.density(car_diff_dist / car_diff_time)
 #plot(car_line)
